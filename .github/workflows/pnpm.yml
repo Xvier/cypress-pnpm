@@ -3,6 +3,7 @@ name: pnpm Cypress Example Workflow
 env:
   CYPRESS_CACHE_FOLDER: '$GITHUB_WORKSPACE/mycache'
 
+
 on:
   push:
 jobs:
