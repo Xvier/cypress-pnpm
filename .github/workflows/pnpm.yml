@@ -1,7 +1,7 @@
 name: pnpm Cypress Example Workflow
 
 env:
-  CYPRESS_CACHE_FOLDER: '$GITHUB_WORKSPACE/mycache'
+  CYPRESS_CACHE_FOLDER: '${{github.workspace}}/mycache'
 
 
 on:
@@ -22,7 +22,7 @@ jobs:
     - name: Cache folder
       uses: actions/cache@v3
       with:
-        path: '$GITHUB_WORKSPACE/mycache'
+        path: '${{github.workspace}}/mycache'
         key: ${{ runner.os}}-cypress
     - name: Install dependencies
       run: pnpm install
